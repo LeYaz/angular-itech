@@ -11,10 +11,15 @@ export class CardComponent {
 
   @Input()data: Card[] = [];
   @Output() likeClick : EventEmitter<number> = new EventEmitter<number>()
+  @Output() cardClick : EventEmitter<number> = new EventEmitter<number>()
 
   constructor() { }
 
   onLikeClicked(id:number){
     this.likeClick.emit(id);
+  }
+
+  onCardClick(id:number){
+    this.cardClick.emit(id);
   }
 }

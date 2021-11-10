@@ -1,5 +1,5 @@
 <div class="container"> 
-    <mat-card class="example-card" *ngFor="let datum of data">
+    <mat-card class="example-card" *ngFor="let datum of data" (click)="onCardClick(datum.id)">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title>{{datum.title}}</mat-card-title>

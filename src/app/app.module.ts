@@ -12,12 +12,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './components/header/header.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'about-us', component: AboutUsComponent},
-  {path: 'contact-us', component: ContactComponent}
+  {path: 'contact-us', component: ContactComponent},
+  {path: 'product/:id', component:ProductDetailsComponent}
 ]
 
 @NgModule({
@@ -27,6 +30,8 @@ const routes: Routes = [
     HomeComponent,
     CardComponent,
     ContactComponent,
+    HeaderComponent,
+    ProductDetailsComponent,
     
   ],
   imports: [

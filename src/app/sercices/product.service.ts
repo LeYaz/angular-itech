@@ -14,4 +14,8 @@ export class ProductService {
   getProducts():Observable<Product[]>{
     return this.http.get<Product[]>(environment.API.baseUrl + environment.API.endpoint.product);
   }
+
+  get(id:number):Observable<Product>{
+    return this.http.get<Product>(environment.API.baseUrl + environment.API.endpoint.product+'/'+id);
+  }
 }

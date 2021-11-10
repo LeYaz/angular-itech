@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 import { Card } from 'src/app/models/Card';
 import { ProductService } from 'src/app/sercices/product.service';
 
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit{
 
   data: Card[] = []
 
-  constructor(private productService:ProductService){
+  constructor(private productService:ProductService, private router:Router){
   }
   ngOnInit(): void {
     this.productService.getProducts().subscribe(products =>{
@@ -27,6 +28,11 @@ export class HomeComponent implements OnInit{
 
   onLikeClick(id:number){
     console.log("Like clicked from home" + id)
+  }
+
+  onCardClick(id:number){
+    console.log("card clicker " + id)
+    this.router.navigateByUrl('product/' + id);
   }
   
 }

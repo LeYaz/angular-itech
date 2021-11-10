@@ -8,7 +8,7 @@ import { ContactService } from 'src/app/sercices/contact.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  contact:Contact = { name:'', email:'', phone:'', message:''};
+  contact:Contact = {name:'', email:'', phone:'', message:''};
 
   constructor(private contactService:ContactService) { }
 
