@@ -5,12 +5,14 @@
       <th>Prix unitaire</th>
       <th>Quantité</th>
       <th>prix total</th>
+      <th>Supprimer</th>
     </tr>
     <tr *ngFor="let article of panier">
       <td> {{article.name}} </td>
       <td> {{article.price}} </td>
-      <td> {{article.quantity}} </td>
+      <td><button (click)="decreaseQuantity(article.id)">-</button> {{article.quantity}} <button (click)="increaseQuantity(article.id)">+</button></td>
       <td> {{article.quantity * article.price}} </td>
+      <td><button (click)="removeArticle(article.id)">X</button></td>
     </tr>
   </table>
 <div><p> Le prix total est de {{prixTotal}}</p></div>

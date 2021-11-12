@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit{
   }
 
   onAddClick(product:Card){
-    let price = parseInt(product.subTitle);
+    let price = parseFloat(product.subTitle);
     this.inCreaseStockOrAdd({id: product.id, name: product.title, price: price, quantity: 1})
     localStorage.setItem('panier',JSON.stringify(this.panier));
   }
