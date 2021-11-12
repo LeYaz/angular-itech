@@ -8,7 +8,8 @@ export const environment = {
     "baseUrl": "http://localhost:5000",
     "endpoint": {
       "product" : '/products',
-      "contact" : '/contacts'
+      "contact" : '/contacts',
+      "panier": '/panier'
     }
   }
 };
