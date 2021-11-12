@@ -14,13 +14,15 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { PanierComponent } from './components/panier/panier.component';
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact-us', component: ContactComponent},
-  {path: 'product/:id', component:ProductDetailsComponent}
+  {path: 'product/:id', component:ProductDetailsComponent},
+  {path: 'panier', component:PanierComponent}
 ]
 
 @NgModule({
@@ -32,6 +34,7 @@ const routes: Routes = [
     ContactComponent,
     HeaderComponent,
     ProductDetailsComponent,
+    PanierComponent,
     
   ],
   imports: [

@@ -14,6 +14,7 @@ export class AboutUsComponent implements OnInit{
   
 
   data: Card[]=[];
+  btnName: string = "SHARE";
 
   persons: Person[] = [
     {id:1, name: 'abs', age:20},

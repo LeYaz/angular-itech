@@ -1,0 +1,16 @@
+
+<table>
+    <tr>
+      <th>Article</th>
+      <th>Prix unitaire</th>
+      <th>Quantité</th>
+      <th>prix total</th>
+    </tr>
+    <tr *ngFor="let article of panier">
+      <td> {{article.name}} </td>
+      <td> {{article.price}} </td>
+      <td> {{article.quantity}} </td>
+      <td> {{article.quantity * article.price}} </td>
+    </tr>
+  </table>
+<div><p> Le prix total est de {{prixTotal}}</p></div>
